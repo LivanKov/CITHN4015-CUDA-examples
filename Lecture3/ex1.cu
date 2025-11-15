@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <cuda_runtime.h>
 
-__global__void hello_from_gpu() {
+__global__ void hello_from_gpu() {
     int idx = blockIdx.x * 4 + threadIdx.x;
     printf("GPU block %d, thread %d, idx %d\n",
         blockIdx.x, threadIdx.x, idx);
